@@ -1,0 +1,14 @@
+{
+  "name": "ipfsNodeConnectionHandler",
+  "version": "1.0.0",
+  "description": "Script that can be utilized to keep your IPFS nodes connected to other desired nodes",
+  "main": "connectionHandler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ipfs-http-client": "^42.0.0"
+  }
+}
