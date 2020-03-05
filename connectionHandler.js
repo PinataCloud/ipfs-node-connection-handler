@@ -2,19 +2,17 @@ const ipfsClient = require('ipfs-http-client');
 const ipfs = ipfsClient({
   host: 'localhost',
   port: 5001,
-  protocol: 'http',
-  timeout: 60000
+  protocol: 'http'
 })
 
 const nodesToConnectTo = require('./nodes.json');
 
-async function checkPeerConnecions() {
+async function checkPeerConnections() {
     ipfs.swarm.peers().then(async (result) => {
         const peerList = {};
-
         //we're going to add all of these to a list to compare against the nodes we want to be connected to.
         result.forEach((peer) => {
-            peerList[peer.peer] = true
+            peerList[peer.peer._idB58String] = true
         });
 
         for(const node of nodesToConnectTo) {
@@ -39,8 +37,9 @@ async function checkPeerConnecions() {
     });
 }
 
-checkPeerConnecions();
+checkPeerConnections();
+
 
 setInterval(function() {
-    checkPeerConnecions()
-}, 300000);
+checkPeerConnections();
+}, 600000);
