@@ -17,7 +17,7 @@ Script that can be utilized to keep your IPFS nodes connected to other desired n
 
 ##### (if you don't have node installed do the following)
 
-    curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+    curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
     sudo apt install nodejs
 
 4) Modify the nodes.json file so that it contains the array of ipfs node IDs that you need to keep the machine's IPFS node connected to
