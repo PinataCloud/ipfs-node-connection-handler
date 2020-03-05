@@ -1,4 +1,10 @@
 [
-    "nodeId1",
-    "nodeId2"
+    {
+        "peerId": "",
+        "nodeMultiAddress": ""
+    },
+    {
+        "peerId": "",
+        "nodeMultiAddress": ""
+    }
 ]
